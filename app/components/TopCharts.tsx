@@ -12,6 +12,7 @@ function formatDuration(seconds: number): string {
 }
 
 export default async function TopCharts() {
+    "use cache";
     const response = await getTopViews({ _limit: 100, _type: "million" });
     const songs = response.data || [];
 

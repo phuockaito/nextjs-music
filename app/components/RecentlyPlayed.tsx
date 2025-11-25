@@ -4,6 +4,7 @@ import { getTrending } from "@/lib/api";
 import type { Song } from "@/types";
 
 export default async function RecentlyPlayed() {
+    "use cache";
     const response = await getTrending({ _limit: 4 });
     const songs = response.data || [];
 
