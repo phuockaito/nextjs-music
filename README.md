@@ -23,7 +23,10 @@ A modern, responsive music streaming application built with Next.js 16, React 19
 -   **Server Components**: Optimized rendering with Next.js Server Components
 -   **Suspense Boundaries**: Loading states with skeleton components
 -   **Cache Components**: Next.js 16 Cache Components for optimal performance
--   **SEO Optimized**: Dynamic metadata, Open Graph, and Twitter Cards
+-   **SEO Optimized**:
+    -   Dynamic metadata, Open Graph, and Twitter Cards
+    -   Automatic `robots.txt` generation
+    -   Dynamic `sitemap.xml` with all song pages
 -   **TypeScript**: Full type safety throughout the application
 -   **Modern UI**: Glassmorphism effects, smooth animations, and gradient backgrounds
 
@@ -192,7 +195,19 @@ Or connect your GitHub repository to Vercel for automatic deployments.
 
 ### Environment Variables
 
-No environment variables required for basic functionality. API endpoints are configured in `lib/api.ts`.
+Optional environment variables:
+
+-   `NEXT_PUBLIC_BASE_URL`: Base URL for your site (used in sitemap and robots.txt)
+    -   Default: `https://your-domain.com`
+    -   Example: `https://music-hub.vercel.app`
+
+Set this in production for proper SEO:
+
+```bash
+NEXT_PUBLIC_BASE_URL=https://your-domain.com
+```
+
+API endpoints are configured in `lib/api.ts`.
 
 ## 📝 Features in Detail
 
@@ -230,6 +245,8 @@ No environment variables required for basic functionality. API endpoints are con
 -   **Image Optimization**: Next.js Image component with proper sizing
 -   **Code Splitting**: Automatic code splitting by Next.js
 -   **Static Generation**: Pre-rendered pages where possible
+-   **Sitemap Generation**: Dynamic sitemap with automatic song page inclusion
+-   **Robots.txt**: Automatic robots.txt generation for search engine optimization
 
 ## 📄 License
 
