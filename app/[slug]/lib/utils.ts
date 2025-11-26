@@ -1,6 +1,7 @@
 import type { Song, CommentsResponse } from "@/types";
 
 export async function getSongBySlug(slug: string): Promise<Song | null> {
+    "use cache";
     const response = await fetch(`https://api-kaito-music.vercel.app/api/music/get-music-name?_name=${slug}`);
 
     if (!response.ok) {

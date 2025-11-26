@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 async function TrendingSongs() {
+    "use cache";
     const response = await getTrending({ _limit: 20 });
     const songs = response.data || [];
 

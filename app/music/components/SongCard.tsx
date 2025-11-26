@@ -14,7 +14,6 @@ function formatNumber(num: number): string {
 }
 
 async function getSongs(): Promise<Song[]> {
-    "use cache";
     const response = await fetch("https://api-kaito-music.vercel.app/api/music/trending?_limit=32");
 
     if (!response.ok) {
@@ -26,6 +25,7 @@ async function getSongs(): Promise<Song[]> {
 }
 
 export default async function SongCard() {
+    "use cache";
     const songs = await getSongs();
     if (songs.length === 0) {
         return (

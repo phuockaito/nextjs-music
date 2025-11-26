@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 async function StreamingSongs() {
+    "use cache";
     const response = await getNewMusic({ _limit: 20 });
     const songs = response.data || [];
 

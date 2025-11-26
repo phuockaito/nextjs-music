@@ -5,7 +5,7 @@ import type { Song } from "@/types";
 
 export default async function RecentlyPlayed() {
     "use cache";
-    const response = await getTrending({ _limit: 4 });
+    const response = await getTrending({ _limit: 12 });
     const songs = response.data || [];
 
     return (
