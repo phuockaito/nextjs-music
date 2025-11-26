@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com'
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://nextjs-music.vercel.app'
 
     // Static routes
     const staticRoutes: MetadataRoute.Sitemap = [
