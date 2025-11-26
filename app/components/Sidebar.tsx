@@ -32,14 +32,7 @@ export default function Sidebar({ isOpen = true }: { isOpen?: boolean; onClose?:
         >
             {/* Top Menu */}
             <div className="p-4 border-b border-gray-800">
-                <div className="flex items-center gap-2 mb-4">
-                    <div className="flex gap-1">
-                        <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <span className="text-gray-400 text-xs font-semibold ml-2">MENU</span>
-                </div>
+
                 <nav className="space-y-1">
                     {menuItems.map((item) => {
                         const isActive = pathname === item.href;
