@@ -22,12 +22,12 @@ export const metadata: Metadata = {
         title: "Music Library | Trending Songs | Music Hub",
         description: "Discover trending songs and explore the most popular tracks right now. Browse our curated collection of music from top artists.",
         type: "website",
-        url: "https://your-domain.com/music",
+        url: "https://nextjs-music.vercel.app//music",
         siteName: "Music Hub",
         locale: "en_US",
         images: [
             {
-                url: "https://your-domain.com/og-music.png", // Update with your actual OG image
+                url: "https://nextjs-music.vercel.app//og-music.png", // Update with your actual OG image
                 width: 1200,
                 height: 630,
                 alt: "Music Hub - Trending Songs",
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Music Library | Trending Songs | Music Hub",
         description: "Discover trending songs and explore the most popular tracks right now.",
-        images: ["https://your-domain.com/og-music.png"], // Update with your actual OG image
+        images: ["https://nextjs-music.vercel.app//og-music.png"], // Update with your actual OG image
     },
     alternates: {
-        canonical: "https://your-domain.com/music",
+        canonical: "https://nextjs-music.vercel.app//music",
     },
     robots: {
         index: true,
@@ -97,7 +97,7 @@ export default function MusicLibrary() {
                         "@type": "CollectionPage",
                         name: "Music Library - Trending Songs",
                         description: "Discover trending songs and explore the most popular tracks right now",
-                        url: "https://your-domain.com/music",
+                        url: "https://nextjs-music.vercel.app//music",
                         mainEntity: {
                             "@type": "ItemList",
                             name: "Trending Songs",
@@ -127,7 +127,7 @@ export default function MusicLibrary() {
                                 <div className="h-3 bg-white/20 rounded w-2/3"></div>
                             </div>
                         ))}
-            </div>
+                    </div>
                 }>
                     <SongCard />
                 </Suspense>

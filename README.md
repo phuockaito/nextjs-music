@@ -198,13 +198,13 @@ Or connect your GitHub repository to Vercel for automatic deployments.
 Optional environment variables:
 
 -   `NEXT_PUBLIC_BASE_URL`: Base URL for your site (used in sitemap and robots.txt)
-    -   Default: `https://your-domain.com`
+    -   Default: `https://nextjs-music.vercel.app/`
     -   Example: `https://music-hub.vercel.app`
 
 Set this in production for proper SEO:
 
 ```bash
-NEXT_PUBLIC_BASE_URL=https://your-domain.com
+NEXT_PUBLIC_BASE_URL=https://nextjs-music.vercel.app/
 ```
 
 API endpoints are configured in `lib/api.ts`.
