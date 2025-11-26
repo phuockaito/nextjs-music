@@ -24,7 +24,7 @@ export function generateSongMetadata(song: Song, slug: string): Metadata {
             title,
             description,
             type: "music.song",
-            url: `https://nextjs-music.vercel.app//${slug}`,
+            url: `https://nextjs-music.vercel.app/${slug}`,
             siteName: "Music Hub",
             images: song.image_music
                 ? [
@@ -46,7 +46,7 @@ export function generateSongMetadata(song: Song, slug: string): Metadata {
             creator: `@${song.name_singer.replace(/\s+/g, "")}`,
         },
         alternates: {
-            canonical: `https://nextjs-music.vercel.app//${slug}`,
+            canonical: `https://nextjs-music.vercel.app/${slug}`,
         },
         other: {
             "music:duration": song.seconds?.toString() || song.time_format || "",
